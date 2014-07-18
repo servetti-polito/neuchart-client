@@ -1,0 +1,21 @@
+
+
+    <header class="cs-header">
+      <h1><i class="icon-bar-chart icon-medium"></i> CatStat</h1>
+      <p>Your source for the critical cat statistics that your busy schedule demands</p>
+      <p></p>  
+    </header>
+    <div class="row cs-padded">
+      <div class="col-lg-6">
+        <div class="cs-center">
+          <h2>Cat Ownership By Country</h2>
+        </div>
+        <div data-role="chart" data-theme="flat" data-series-defaults="{ type: 'column' }" data-series="[{ field: 'value', tooltip: { visible: true, format: '000,' } }]" data-value-axis="{ labels: { template: '#: data.value/1000000 # M' } }"  data-bind="source: ownership.country" data-category-axis="{ field: 'country', majorGridLines: false }"></div>
+      </div>
+      <div class="col-lg-6">
+        <div class="cs-center">
+          <h2>Househould Pet Ownership</h2>
+        </div>
+        <div data-role="chart" data-theme="flat" data-bind="source: ownership.pct" data-series-defaults="{ type: 'pie' }" data-series="[{ field: 'value', categoryField: 'type', tooltip: { visible: true, template: '#: category # #: value #' } }]"></div>
+      </div>
+    </div>
